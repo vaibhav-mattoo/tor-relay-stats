@@ -59,51 +59,6 @@ def extract_bandwidth_file(filepath, output_dir="bandwidth_data"):
     return extract_dir
 
 
-def parse_bandwidth_file(filepath):
-    """
-    Parse a single bandwidth file and extract relay measurements
-
-    Returns a dictionary with:
-    - timestamp: when the measurement was taken
-    - relays: dict of relay_id -> bandwidth (in KB/s)
-    """
-    with open(filepath, "r") as f:
-        lines = f.readlines()
-
-    # Parse header to get timestamp
-    timestamp = None
-    relay_data = {}
-
-    for line in lines:
-        line = line.strip()
-
-        # Skip empty lines
-        if not line:
-            continue
-
-        # First line should be timestamp
-        if line.isdigit() and timestamp is None:
-            timestamp = int(line)
-            continue
-
-        # Parse relay lines (format: node_id=<id> bw=<bandwidth> ...)
-        if line.startswith("node_id=") or "=" in line:
-            parts = line.split()
-            relay_id = None
-            bandwidth = None
-
-            for part in parts:
-                if part.startswith("node_id="):
-                    relay_id = part.split("=")[1]
-                elif part.startswith("bw="):
-                    bandwidth = int(part.split("=")[1])
-
-            if relay_id and bandwidth is not None:
-                relay_data[relay_id] = bandwidth
-
-    return {"timestamp": timestamp, "relays": relay_data}
-
-
 if __name__ == "__main__":
     # Download both months
     print("Downloading bandwidth files...")
