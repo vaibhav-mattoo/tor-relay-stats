@@ -1,0 +1,2 @@
+/var/spool/slurmd/job13573531/slurm_script: line 46: 3298248 Killed                  python "$PROJECT_DIR/analyze_bandwidth.py" "$PROJECT_DIR/bandwidth_data" --network
+slurmstepd: error: Detected 1 oom_kill event in StepId=13573531.batch. Some of the step tasks have been OOM Killed.

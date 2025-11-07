@@ -1,0 +1,133 @@
+[INFO] Using PROJECT_DIR=/work/hdd/bdpr/vmattoo2/tor-relay-stats
+[INFO] SLURM_JOB_ID=13563829
+[INFO] Hostname: cn041.delta.ncsa.illinois.edu
+[INFO] Starting at: 2025-11-06T09:17:48-06:00
+[INFO] Creating Python venv at /work/hdd/bdpr/vmattoo2/tor-relay-stats/.venv
+Python 3.6.8
+[INFO] Installing Python dependencies
+Collecting pip
+  Using cached https://files.pythonhosted.org/packages/a4/6d/6463d49a933f547439d6b5b98b46af8742cc03ae83543e4d7688c2420f8b/pip-21.3.1-py3-none-any.whl
+Installing collected packages: pip
+  Found existing installation: pip 9.0.3
+    Uninstalling pip-9.0.3:
+      Successfully uninstalled pip-9.0.3
+Successfully installed pip-21.3.1
+Collecting numpy
+  Downloading numpy-1.19.5-cp36-cp36m-manylinux2010_x86_64.whl (14.8 MB)
+Collecting matplotlib
+  Downloading matplotlib-3.3.4-cp36-cp36m-manylinux1_x86_64.whl (11.5 MB)
+Collecting kiwisolver>=1.0.1
+  Downloading kiwisolver-1.3.1-cp36-cp36m-manylinux1_x86_64.whl (1.1 MB)
+Collecting pillow>=6.2.0
+  Downloading Pillow-8.4.0-cp36-cp36m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.1 MB)
+Collecting cycler>=0.10
+  Downloading cycler-0.11.0-py3-none-any.whl (6.4 kB)
+Collecting python-dateutil>=2.1
+  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Collecting pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.3
+  Using cached pyparsing-3.1.4-py3-none-any.whl (104 kB)
+Collecting six>=1.5
+  Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+Installing collected packages: six, python-dateutil, pyparsing, pillow, numpy, kiwisolver, cycler, matplotlib
+Successfully installed cycler-0.11.0 kiwisolver-1.3.1 matplotlib-3.3.4 numpy-1.19.5 pillow-8.4.0 pyparsing-3.1.4 python-dateutil-2.9.0.post0 six-1.17.0
+[STEP] Downloading all 2024 bandwidth archives and extracting
+Downloading bandwidth files for all months in 2024...
+
+Downloading bandwidths-2024-01.tar.xz...
+Downloaded bandwidths-2024-01.tar.xz
+
+Downloading bandwidths-2024-02.tar.xz...
+Downloaded bandwidths-2024-02.tar.xz
+
+Downloading bandwidths-2024-03.tar.xz...
+Downloaded bandwidths-2024-03.tar.xz
+
+Downloading bandwidths-2024-04.tar.xz...
+Downloaded bandwidths-2024-04.tar.xz
+
+Downloading bandwidths-2024-05.tar.xz...
+Downloaded bandwidths-2024-05.tar.xz
+
+Downloading bandwidths-2024-06.tar.xz...
+Downloaded bandwidths-2024-06.tar.xz
+
+Downloading bandwidths-2024-07.tar.xz...
+Downloaded bandwidths-2024-07.tar.xz
+
+Downloading bandwidths-2024-08.tar.xz...
+Downloaded bandwidths-2024-08.tar.xz
+
+Downloading bandwidths-2024-09.tar.xz...
+Downloaded bandwidths-2024-09.tar.xz
+
+Downloading bandwidths-2024-10.tar.xz...
+Downloaded bandwidths-2024-10.tar.xz
+
+Downloading bandwidths-2024-11.tar.xz...
+Downloaded bandwidths-2024-11.tar.xz
+
+Downloading bandwidths-2024-12.tar.xz...
+Downloaded bandwidths-2024-12.tar.xz
+
+
+Extracting files...
+
+Extracting bandwidth_data/bandwidths-2024-01.tar.xz...
+Extracted to bandwidth_data
+2024-01 data extracted successfully
+
+Extracting bandwidth_data/bandwidths-2024-02.tar.xz...
+Extracted to bandwidth_data
+2024-02 data extracted successfully
+
+Extracting bandwidth_data/bandwidths-2024-03.tar.xz...
+Extracted to bandwidth_data
+2024-03 data extracted successfully
+
+Extracting bandwidth_data/bandwidths-2024-04.tar.xz...
+Extracted to bandwidth_data
+2024-04 data extracted successfully
+
+Extracting bandwidth_data/bandwidths-2024-05.tar.xz...
+Extracted to bandwidth_data
+2024-05 data extracted successfully
+
+Extracting bandwidth_data/bandwidths-2024-06.tar.xz...
+Extracted to bandwidth_data
+2024-06 data extracted successfully
+
+Extracting bandwidth_data/bandwidths-2024-07.tar.xz...
+Extracted to bandwidth_data
+2024-07 data extracted successfully
+
+Extracting bandwidth_data/bandwidths-2024-08.tar.xz...
+Extracted to bandwidth_data
+2024-08 data extracted successfully
+
+Extracting bandwidth_data/bandwidths-2024-09.tar.xz...
+Extracted to bandwidth_data
+2024-09 data extracted successfully
+
+Extracting bandwidth_data/bandwidths-2024-10.tar.xz...
+Extracted to bandwidth_data
+2024-10 data extracted successfully
+
+Extracting bandwidth_data/bandwidths-2024-11.tar.xz...
+Extracted to bandwidth_data
+2024-11 data extracted successfully
+
+Extracting bandwidth_data/bandwidths-2024-12.tar.xz...
+Extracted to bandwidth_data
+2024-12 data extracted successfully
+
+
+Successfully downloaded and extracted 12 months of data.
+
+Note: The extraction creates directories with individual bandwidth files.
+Each file represents bandwidth measurements at a specific time.
+
+Next, use the analysis script to process these files.
+[STEP] Running network-wide analysis for 2024
+
+Analyzing overall network bandwidth...
+Loading measurements from /work/hdd/bdpr/vmattoo2/tor-relay-stats/bandwidth_data...

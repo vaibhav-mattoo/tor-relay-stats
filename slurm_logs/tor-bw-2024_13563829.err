@@ -1,0 +1,7 @@
+Cache entry deserialization failed, entry ignored
+You are using pip version 21.3.1, however version 25.3 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+/usr/lib64/python3.6/tarfile.py:2221: RuntimeWarning: The default behavior of tarfile extraction has been changed to disallow common exploits (including CVE-2007-4559). By default, absolute/parent paths are disallowed and some mode bits are cleared. See https://access.redhat.com/articles/7004769 for more details.
+  RuntimeWarning)
+/var/spool/slurmd/job13563829/slurm_script: line 49: 557725 Killed                  python "$PROJECT_DIR/analyze_bandwidth.py" "$PROJECT_DIR/bandwidth_data" --network
+slurmstepd: error: Detected 1 oom_kill event in StepId=13563829.batch. Some of the step tasks have been OOM Killed.
