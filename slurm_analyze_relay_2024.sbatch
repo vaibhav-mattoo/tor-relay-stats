@@ -53,3 +53,5 @@ python "$PROJECT_DIR/analyze_bandwidth.py" "$PROJECT_DIR/bandwidth_data" "$RELAY
 
 echo "[DONE] Completed at: $(date -Is)"
 
+
+

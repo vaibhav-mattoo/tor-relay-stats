@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Script to download and parse Tor bandwidth files from CollecTor
-for March 1, 2024 to April 1, 2024
+for all months in 2024
 """
 
 import urllib.request
@@ -60,27 +60,36 @@ def extract_bandwidth_file(filepath, output_dir="bandwidth_data"):
 
 
 if __name__ == "__main__":
-    # Download both months
-    print("Downloading bandwidth files...")
+    # Download all months in 2024
+    print("Downloading bandwidth files for all months in 2024...")
     print()
 
-    mar_file = download_bandwidth_file("2024-03")
-    apr_file = download_bandwidth_file("2024-04")
+    downloaded_files = []
+    months = [
+        "2024-01", "2024-02", "2024-03", "2024-04", "2024-05", "2024-06",
+        "2024-07", "2024-08", "2024-09", "2024-10", "2024-11", "2024-12"
+    ]
+
+    for month_year in months:
+        filepath = download_bandwidth_file(month_year)
+        if filepath:
+            downloaded_files.append((month_year, filepath))
+        print()
 
     print("\nExtracting files...")
+    print()
 
-    if mar_file:
-        mar_dir = extract_bandwidth_file(mar_file)
-        print(f"March 2024 data extracted successfully")
-    else:
-        print("Skipping March 2024 extraction (download failed)")
+    extracted_dirs = []
+    for month_year, filepath in downloaded_files:
+        extract_dir = extract_bandwidth_file(filepath)
+        if extract_dir:
+            extracted_dirs.append(extract_dir)
+            print(f"{month_year} data extracted successfully")
+        else:
+            print(f"Skipping {month_year} extraction (download failed)")
+        print()
 
-    if apr_file:
-        apr_dir = extract_bandwidth_file(apr_file)
-        print(f"April 2024 data extracted successfully")
-    else:
-        print("Skipping April 2024 extraction (download failed)")
-
-    print("\nNote: The extraction creates a directory with individual bandwidth files.")
+    print(f"\nSuccessfully downloaded and extracted {len(extracted_dirs)} months of data.")
+    print("\nNote: The extraction creates directories with individual bandwidth files.")
     print("Each file represents bandwidth measurements at a specific time.")
     print("\nNext, use the analysis script to process these files.")

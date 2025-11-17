@@ -51,3 +51,5 @@ echo "[STEP] Running relay analysis for 2024 (incremental)"
 python "$PROJECT_DIR/analyze_bandwidth.py" "$PROJECT_DIR/bandwidth_data" "$RELAY_FP"
 
 echo "[DONE] Completed at: $(date -Is)"
+
+
